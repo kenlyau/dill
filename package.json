@@ -1,0 +1,34 @@
+{
+  "name": "dill",
+  "version": "0.0.1",
+  "description": "util for javascript",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenlyau/dill.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "ken",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kenlyau/dill/issues"
+  },
+  "homepage": "https://github.com/kenlyau/dill#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^21.2.1",
+    "wepback": "^1.0.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  }
+}
