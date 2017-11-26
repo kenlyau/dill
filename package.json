@@ -4,7 +4,7 @@
   "description": "util for javascript",
   "main": "dist/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",

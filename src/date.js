@@ -1,6 +1,13 @@
+/**
+ * 
+ * @param {*} date
+ * example
+ * date(xxxxxx).format('yyyy-MM-dd HH:mm') 
+ */
 export default function (date = Date.now()) {
   const D = new Date(date)
   const T = {
+    "y+": D.getFullYear(),
     "M+": D.getMonth() + 1,
     "d+": D.getDate(),
     "h+": D.getHours(),
@@ -12,12 +19,9 @@ export default function (date = Date.now()) {
   return {
     D,
     format: (fmt) => {
-      if (/(y+)/.test(fmt)) {
-        fmt = fmt.replace(RegExp.$1, (D.getFullYear() + '')).substr(4 - RegExp.$1.length)
-      }
       for (let k in T) {
-        if (new RegExp(`(${k})`).test(fmt)) {
-          fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (T[k]) : (("00" + T[k]).substr(("" + T[k]).length)))
+        if (RegExp(`(${k})`).test(fmt)) {
+          fmt = fmt.replace(RegExp.$1, T[k])
         }
       }
       return fmt
