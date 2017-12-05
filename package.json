@@ -1,5 +1,5 @@
 {
-  "name": "dill",
+  "name": "dilljs",
   "version": "0.0.1",
   "description": "util for javascript",
   "main": "dist/index.js",
