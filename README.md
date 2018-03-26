@@ -1,7 +1,7 @@
 # dill
 
-[![CircleCI](https://img.shields.io/circleci/project/github/RedSparr0w/node-csgo-parser.svg)](https://circleci.com/gh/kenlyau/dill)
-[![Codecov](https://img.shields.io/codecov/c/github/codecov/example-python.svg)](https://codecov.io/gh/kenlyau/dill)
+[![CircleCI](https://circleci.com/gh/kenlyau/dill.svg?style=svg)](https://circleci.com/gh/kenlyau/dill)
+[![codecov](https://codecov.io/gh/kenlyau/dill/branch/master/graph/badge.svg)](https://codecov.io/gh/kenlyau/dill)
 [![npm package](https://img.shields.io/npm/v/dilljs.svg?style=flat-square)](https://www.npmjs.org/package/dilljs)
 [![NPM downloads](http://img.shields.io/npm/dm/dilljs.svg?style=flat-square)](http://www.npmtrends.com/dilljs)
 
