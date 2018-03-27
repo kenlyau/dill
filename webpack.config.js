@@ -4,7 +4,6 @@ const libraryName = 'dill'
 var outputFile = libraryName + '.js'
 var plugins = []
 const env = process.env.NODE_ENV
-console.log('=================>',JSON.stringify(process.env, null, 2))
 if (env === 'production') {
   outputFile = libraryName + '.min.js'
 }
