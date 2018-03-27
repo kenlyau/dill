@@ -7,10 +7,34 @@
 
 My Util of Javascript Funcation
 
+### Install
+
+In browser:
+
+```
+<script scr="./dill.min.js"></script>
+```
+
+Using npm:
+
+```
+$ npm i --save dilljs
+```
+
 - date
 
 date().format('yyyy-MM-dd hh:mm')
 
 - isEmpty
 
-isEmpty([])/isEmpty({})/isEmpty('')
+isEmpty([])
+
+/isEmpty({})
+
+/isEmpty('')
+
+- group
+
+group([1,2,3,4,5], 3)
+
+// [[1,2,3],[4,5]]
