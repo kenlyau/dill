@@ -164,25 +164,144 @@ exports.default = function (array, subGroupLength) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.isEmpty = exports.group = exports.date = undefined;
+exports.isBoolean = exports.isElement = exports.isDate = exports.isNumber = exports.isError = exports.isObject = exports.isArray = exports.isEmpty = exports.group = exports.date = undefined;
 
 var _date = __webpack_require__(/*! ./date */ "./src/date.js");
 
 var _date2 = _interopRequireDefault(_date);
 
+var _group = __webpack_require__(/*! ./group */ "./src/group.js");
+
+var _group2 = _interopRequireDefault(_group);
+
 var _isEmpty = __webpack_require__(/*! ./is-empty */ "./src/is-empty.js");
 
 var _isEmpty2 = _interopRequireDefault(_isEmpty);
 
-var _group = __webpack_require__(/*! ./group */ "./src/group.js");
+var _isArray = __webpack_require__(/*! ./is-array */ "./src/is-array.js");
 
-var _group2 = _interopRequireDefault(_group);
+var _isArray2 = _interopRequireDefault(_isArray);
+
+var _isObject = __webpack_require__(/*! ./is-object */ "./src/is-object.js");
+
+var _isObject2 = _interopRequireDefault(_isObject);
+
+var _isError = __webpack_require__(/*! ./is-error */ "./src/is-error.js");
+
+var _isError2 = _interopRequireDefault(_isError);
+
+var _isNumber = __webpack_require__(/*! ./is-number */ "./src/is-number.js");
+
+var _isNumber2 = _interopRequireDefault(_isNumber);
+
+var _isDate = __webpack_require__(/*! ./is-date */ "./src/is-date.js");
+
+var _isDate2 = _interopRequireDefault(_isDate);
+
+var _isElement = __webpack_require__(/*! ./is-element */ "./src/is-element.js");
+
+var _isElement2 = _interopRequireDefault(_isElement);
+
+var _isBoolean = __webpack_require__(/*! ./is-boolean */ "./src/is-boolean.js");
+
+var _isBoolean2 = _interopRequireDefault(_isBoolean);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.date = _date2.default;
 exports.group = _group2.default;
 exports.isEmpty = _isEmpty2.default;
+exports.isArray = _isArray2.default;
+exports.isObject = _isObject2.default;
+exports.isError = _isError2.default;
+exports.isNumber = _isNumber2.default;
+exports.isDate = _isDate2.default;
+exports.isElement = _isElement2.default;
+exports.isBoolean = _isBoolean2.default;
+
+/***/ }),
+
+/***/ "./src/is-array.js":
+/*!*************************!*\
+  !*** ./src/is-array.js ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var isArray = Array.isArray || function (value) {
+  return Object.prototype.toString.call(value) === '[object Array]';
+};
+
+exports.default = isArray;
+
+/***/ }),
+
+/***/ "./src/is-boolean.js":
+/*!***************************!*\
+  !*** ./src/is-boolean.js ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var isBoolean = function isBoolean(value) {
+  return Object.prototype.toString.call(value) === '[object Boolean]';
+};
+
+exports.default = isBoolean;
+
+/***/ }),
+
+/***/ "./src/is-date.js":
+/*!************************!*\
+  !*** ./src/is-date.js ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var isDate = function isDate(value) {
+  return Object.prototype.toString.call(value) === '[object Date]';
+};
+
+exports.default = isDate;
+
+/***/ }),
+
+/***/ "./src/is-element.js":
+/*!***************************!*\
+  !*** ./src/is-element.js ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var isElement = function isElement(value) {
+  return value !== undefined && typeof HTMLElement !== 'undefined' && value instanceof HTMLElement && value.nodeType === 1;
+};
+
+exports.default = isElement;
 
 /***/ }),
 
@@ -220,6 +339,69 @@ function isEmpty(obj) {
   }
   return true;
 }
+
+/***/ }),
+
+/***/ "./src/is-error.js":
+/*!*************************!*\
+  !*** ./src/is-error.js ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var isError = function isError(value) {
+  return Object.prototype.toString.call(value) === '[object Error]';
+};
+
+exports.default = isError;
+
+/***/ }),
+
+/***/ "./src/is-number.js":
+/*!**************************!*\
+  !*** ./src/is-number.js ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var isNumber = function isNumber(value) {
+  return Object.prototype.toString.call(value) === '[object Number]';
+};
+
+exports.default = isNumber;
+
+/***/ }),
+
+/***/ "./src/is-object.js":
+/*!**************************!*\
+  !*** ./src/is-object.js ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var isObject = function isObject(value) {
+  return Object.prototype.toString.call(value) === '[object Object]';
+};
+
+exports.default = isObject;
 
 /***/ })
 
